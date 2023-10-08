@@ -71,7 +71,8 @@ public class Card {
     @PrePersist
     public void prePersist() {
         createdAt = LocalDateTime.now();
-        addExpirationDate();
+        expirationDate = createdAt.plusYears(3);
+        //addExpirationDate();
     }
 
     public void addExpirationDate() {

@@ -19,24 +19,25 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
-    @Column(unique = true, nullable = false)
-    private String username;
+    @Column(name = "DOCUMENT_ID", unique = true, nullable = false)
+    private String documentID;
 
-    @Column(nullable = false)
+    @Column(name = "PASSWORD", nullable = false)
     private String password;
 
-    @Column(nullable = false)
+    @Column(name = "FIRST_NAME", nullable = false)
     private String firstName;
 
-    @Column(nullable = false)
+    @Column(name = "LAST_NAME", nullable = false)
     private String lastName;
 
-    @Column(nullable = false)
+    @Column(name = "EMAIL", nullable = false)
     private String email;
 
-    @Column(nullable = false)
+    @Column(name = "PHONE", nullable = false)
     private String phone;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
