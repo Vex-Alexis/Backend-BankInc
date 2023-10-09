@@ -82,7 +82,7 @@ La API de Bank Inc Portal Web debería estar en funcionamiento en http://localho
 
 A continuación, se proporcionan ejemplos de cómo utilizar la API de Bank Inc para realizar operaciones comunes.
 
-*El API contiene el archivo `import.sql` que se encargará de poblar la base de datos para una mejor experiencia en el uso de la misma, se recomienda usar los siguientes endpoints*
+*El API contiene el archivo `import.sql` que se encargará de poblar la base de datos, para ofrecer una mejor experiencia en su uso. Se recomienda usar los siguientes endpoints:*
 
 <br> <!-- Este es un salto de línea -->
 
