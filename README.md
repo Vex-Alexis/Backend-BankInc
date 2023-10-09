@@ -39,6 +39,8 @@ Antes de comenzar, asegúrate de tener lo siguiente instalado en tu sistema:
 - **MySQL**: MySQL Server instalado y configurado en tu sistema
 - **Maven**: Maven instalado en tu sistema
 
+<br> <!-- Este es un salto de línea -->
+
 ### Configuración de la Base de Datos
 
 Antes de ejecutar la API, debes configurar la base de datos MySQL. Sigue estos pasos:
@@ -81,11 +83,15 @@ La API de Bank Inc Portal Web debería estar en funcionamiento en http://localho
 
 A continuación, se proporcionan ejemplos de cómo utilizar la API de Bank Inc para realizar operaciones comunes.
 
+<br> <!-- Este es un salto de línea -->
+
 ### Mostrar todos los registros de cada tabla
 
 - GET: http://localhost:8080/v1/bankinc/user
 - GET: http://localhost:8080/v1/bankinc/card
 - GET: http://localhost:8080/v1/bankinc/transaction
+
+<br> <!-- Este es un salto de línea -->
 
 ### Crear una nueva tarjeta
 
@@ -107,6 +113,7 @@ Cuerpo de la solicutd
 ```
 La API responderá con un status 201 Created y los detalles de la tarjeta recién creada.
 
+<br> <!-- Este es un salto de línea -->
 
 ### Recargar tarjeta
 
@@ -116,6 +123,7 @@ Para recargar una nueva tarjeta, envía una solicitud PUT a la siguiente URL:
 
 Reemplaza el "1" con el ID de la tarjeta que deseas recargar y "5000" con el monto que deseas recargar.
 
+<br> <!-- Este es un salto de línea -->
 
 ### Anular Transacción
 
@@ -125,6 +133,7 @@ Para anular una transacción, envía una solicitud POST a la siguiente URL:
 
 Reemplaza el "1" con el ID de la transacción que deseas anular. Ten en cuenta que solo puedes anular transacciones EXITOSAS realizadas en las últimas 24 horas.
 
+<br> <!-- Este es un salto de línea -->
 
 ### Eliminar Transacción
 
