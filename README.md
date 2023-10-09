@@ -149,7 +149,7 @@ Reemplaza el "1" con el ID de la transacción que deseas eliminar.
 ---
 
 ### **FIN**
-
+> Mi magia es no rendirme.
 
 
 
