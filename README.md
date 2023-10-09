@@ -27,6 +27,7 @@ Este es el repositorio Backend del proyecto "Bank Inc Portal Web", una plataform
 - Anular transacciones exitosas y devolver el saldo a la tarjeta.
 - Eliminar transacciones por ID.
 - Manejo de excepciones personalizadas y genéricas.
+- Relaciones bidireccionales y unidireccionales.
 
 ## Requisitos
 
