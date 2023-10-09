@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -30,6 +31,7 @@ public class Card {
     @Column(nullable = false)
     private String productId;
 
+    @Size(max = 16, message = "El número de tarjeta no puede tener más de 16 dígitos")
     @Column(nullable = false, unique = true)
     private String cardNumber;
 
@@ -78,5 +80,7 @@ public class Card {
         currency = "USD";
         balance = BigDecimal.ZERO;
     }
+
+
 
 }
