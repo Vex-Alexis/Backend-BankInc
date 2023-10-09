@@ -9,10 +9,6 @@ Este es el repositorio Backend del proyecto "Bank Inc Portal Web", una plataform
 - [Requisitos](#requisitos)
 - [Instalación](#instalación)
 - [Uso](#uso)
-- [Ejemplos](#ejemplos)
-- [Documentación](#documentación)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
 
 ## Tecnologías Utilizadas
 
