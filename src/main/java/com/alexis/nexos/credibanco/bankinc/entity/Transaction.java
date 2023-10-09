@@ -50,4 +50,10 @@ public class Transaction {
     public enum TransactionStatus {
         EXITOSA, RECHAZADA, ANULADA
     }
+
+    @PrePersist
+    public void prePersist() {
+        transactionDate = LocalDateTime.now();
+    }
+
 }

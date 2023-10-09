@@ -1,10 +1,12 @@
 package com.alexis.nexos.credibanco.bankinc.controller;
 
 import com.alexis.nexos.credibanco.bankinc.entity.Card;
+import com.alexis.nexos.credibanco.bankinc.entity.Transaction;
 import com.alexis.nexos.credibanco.bankinc.entity.User;
 import com.alexis.nexos.credibanco.bankinc.exception.InsufficientBalanceException;
 import com.alexis.nexos.credibanco.bankinc.exception.NotFoundException;
 import com.alexis.nexos.credibanco.bankinc.service.ICardService;
+import com.alexis.nexos.credibanco.bankinc.service.ITransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +21,8 @@ public class CardController {
 
     @Autowired
     private ICardService cardService;
+    @Autowired
+    private ITransactionService transactionService;
 
     @GetMapping
     public ResponseEntity<List<Card>> getAllCards(){
@@ -46,7 +50,16 @@ public class CardController {
 
         cardService.createCard(card);
 
+        Transaction transaction = new Transaction();
+        transaction.setAmount(amount);
+        transaction.setStatus(Transaction.TransactionStatus.EXITOSA);
+        transaction.setUser(card.getUser());
+        transaction.setCard(card);
+        transactionService.saveTransaction(transaction);
+
         return ResponseEntity.ok("Tarjeta recargada con éxito, su nuevo saldo es: " + card.getBalance() + " " + card.getCurrency());
     }
+
+
 
 }
