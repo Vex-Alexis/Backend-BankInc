@@ -147,7 +147,6 @@ Reemplaza el "1" con el ID de la transacción que deseas eliminar.
 ---
 
 ### **FIN**
-El Frontend esta en construcción :(
 
 
 
