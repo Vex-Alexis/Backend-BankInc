@@ -81,6 +81,4 @@ public class Card {
         balance = BigDecimal.ZERO;
     }
 
-
-
 }

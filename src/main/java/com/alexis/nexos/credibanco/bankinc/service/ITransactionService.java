@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface ITransactionService {
 
+    Transaction getTransactionById(Long id);
     List<Transaction> getAllTransactions();
     Transaction saveTransaction(Transaction transaction);
 

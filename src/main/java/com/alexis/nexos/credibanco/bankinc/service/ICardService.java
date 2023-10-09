@@ -7,6 +7,7 @@ import java.util.List;
 public interface ICardService {
 
     Card getCardById(Long id);
+    Card getCardByCardNumber(String cardNumber);
 
     List<Card> getAllCards();
 

@@ -24,7 +24,11 @@ public class CardService implements ICardService {
     public Card getCardById(Long id) {
         Card card = cardRepository.findById(id)
                 .orElseThrow(()-> new NotFoundException(id));
-
+        return card;
+    }
+    @Override
+    public Card getCardByCardNumber(String cardNumber) {
+        Card card = cardRepository.findByCardNumber(cardNumber);
         return card;
     }
 

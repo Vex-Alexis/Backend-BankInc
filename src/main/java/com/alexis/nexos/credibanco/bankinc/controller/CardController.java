@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/v1/bankinc/card")
@@ -32,6 +33,27 @@ public class CardController {
 
     @PostMapping
     public ResponseEntity<?> createCard(@RequestBody Card card){
+
+        String cardNumber;
+        do {
+            // Genera un nuevo número aleatorio de 10 dígitos
+            Random random = new Random();
+            long cardNumberSuffix = random.nextLong() % 1_000_000_000;
+            if (cardNumberSuffix < 0) {
+                cardNumberSuffix *= -1;
+            }
+            cardNumber = card.getProductId() + String.format("%010d", cardNumberSuffix);
+            card.setCardNumber(cardNumber);
+
+            // Verifica si el cardNumber ya existe en la base de datos
+            Card existingCard = cardService.getCardByCardNumber(card.getCardNumber());
+            if (existingCard != null) {
+                // Si existe, regenera el número aleatorio y verifica nuevamente
+                cardNumber = null;
+            }
+        } while (cardNumber == null);
+        // Ahora cardNumber contiene un número único de tarjeta
+
         Card newCard = cardService.createCard(card);
         return ResponseEntity.status(HttpStatus.CREATED).body(newCard);
     }

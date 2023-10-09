@@ -15,7 +15,7 @@ INSERT INTO Card (product_id, card_number, card_holder_name, expiration_date, cu
 INSERT INTO Card (product_id, card_number, card_holder_name, expiration_date, currency, balance, card_type, created_at, user_id) VALUES ('349512', '349512345678912', 'Sandra López', '2026-03-01 08:00:00', 'USD', 1800.00, 'CREDITO', '2023-03-01 08:00:00', 5);
 INSERT INTO Card (product_id, card_number, card_holder_name, expiration_date, currency, balance, card_type, created_at, user_id) VALUES ('371449', '371449635398431', 'Sandra López', '2026-03-01 08:00:00', 'USD', 1800.00, 'DEBITO', '2023-03-01 08:00:00', 5);
 
-INSERT INTO Transaction (amount, transaction_date, status, user_id, card_id) VALUES (100.00, '2023-06-15 14:30:00', 'EXITOSA', 1, 1);
+INSERT INTO Transaction (amount, transaction_date, status, user_id, card_id) VALUES (100.00, '2023-12-30 14:30:00', 'EXITOSA', 1, 1);
 INSERT INTO Transaction (amount, transaction_date, status, user_id, card_id) VALUES (200.00, '2023-08-15 14:30:00', 'EXITOSA', 1, 2);
 INSERT INTO Transaction (amount, transaction_date, status, user_id, card_id) VALUES (300.00, '2023-10-15 14:30:00', 'RECHAZADA', 1, 1);
 INSERT INTO Transaction (amount, transaction_date, status, user_id, card_id) VALUES (400.00, '2023-12-15 14:30:00', 'ANULADA', 1, 2);
