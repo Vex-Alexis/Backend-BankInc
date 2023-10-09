@@ -41,7 +41,6 @@ public class Transaction {
 
     @ManyToOne
     @JoinColumn(name = "card_id", nullable = false)
-    @JsonBackReference
     private Card card;
 
 
