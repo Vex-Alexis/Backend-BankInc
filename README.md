@@ -20,12 +20,12 @@ Este es el repositorio Backend del proyecto "Bank Inc Portal Web", una plataform
 
 ## Características
 
+- Mostrar todos los usarios, tarjetas y transacciones.
 - Administración de tarjetas de crédito y débito.
-- Permite recargar la tarjeta.
-- Registro y consulta de transacciones.
+- Permite recarga de tarjetas.
+- Consulta de transacciones.
 - Anular transacciones exitosas y devolver el saldo a la tarjeta.
 - Eliminar transacciones por ID.
-- Mostrar todos los usarios, tarjetas y transacciones.
 - Manejo de excepciones personalizadas y genéricas.
 
 ## Requisitos
@@ -41,6 +41,9 @@ Antes de comenzar, asegúrate de tener lo siguiente instalado en tu sistema:
 
 Antes de ejecutar la API, debes configurar la base de datos MySQL. Sigue estos pasos:
 1. Crea la base de datos MySQL para la API `bankinc_db`.
+```bash
+CREATE DATABASE bankinc_db;
+```
 2. Abre el archivo de configuración de la base de datos (`application.properties`) y configura las credenciales de acceso a la base de datos:
 
 ```properties
@@ -144,7 +147,7 @@ Reemplaza el "1" con el ID de la transacción que deseas eliminar.
 ---
 
 ### **FIN**
-
+El Frontend esta en construcción :(
 
 
 
