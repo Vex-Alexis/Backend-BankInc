@@ -1,7 +1,9 @@
 package com.alexis.nexos.credibanco.bankinc.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -53,7 +55,7 @@ public class Card {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    @JsonIgnore
+    @JsonBackReference
     private User user;
 
     @OneToMany(mappedBy = "card", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
@@ -72,12 +74,8 @@ public class Card {
     public void prePersist() {
         createdAt = LocalDateTime.now();
         expirationDate = createdAt.plusYears(3);
-        //addExpirationDate();
+        currency = "USD";
+        balance = BigDecimal.ZERO;
     }
 
-    public void addExpirationDate() {
-        if (createdAt != null) {
-            expirationDate = createdAt.plusYears(3); // Suma 3 años a la fecha de creación
-        }
-    }
 }

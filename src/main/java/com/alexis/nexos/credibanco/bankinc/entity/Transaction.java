@@ -1,5 +1,7 @@
 package com.alexis.nexos.credibanco.bankinc.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,10 +34,12 @@ public class Transaction {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
+    @JsonIgnore
     private User user;
 
     @ManyToOne
     @JoinColumn(name = "card_id", nullable = false)
+    @JsonBackReference
     private Card card;
 
 
