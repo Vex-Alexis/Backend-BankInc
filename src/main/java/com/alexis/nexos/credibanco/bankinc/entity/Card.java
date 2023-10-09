@@ -36,7 +36,8 @@ public class Card {
     @Column(nullable = false)
     private String cardHolderName;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "TIMESTAMP(0)")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime expirationDate;
 
     @Column(nullable = false)
